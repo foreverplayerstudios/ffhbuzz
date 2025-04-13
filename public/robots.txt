@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://freefilmhub.buzz/sitemap.xml
+
+# Disallow
+Disallow: /auth/
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*.php$
+Disallow: /*.html$
+
+# Crawl-delay
+Crawl-delay: 10

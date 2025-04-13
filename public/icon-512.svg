@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="64" ry="64" fill="url(#grad1)"/>
+  <path d="M 128 192 L 128 320 L 384 320 L 384 192 L 128 192 Z M 144 208 L 368 208 L 368 240 L 144 240 L 144 208 Z M 144 256 L 368 256 L 368 304 L 144 304 L 144 256 Z" fill="white"/>
+  <text x="256" y="400" 
+      font-family="Arial, sans-serif" 
+      font-size="48" 
+      font-weight="bold" 
+      text-anchor="middle" 
+      fill="white">FreeFilmHub</text>
+</svg>
