@@ -62,5 +62,5 @@ export async function handleThumbnailRequest(req: Request, res: Response) {
   const { mediaType, id } = req.params;
   
   // Redirect to TMDB image
-  res.redirect(`https://cover-images.b-cdn.net/t/p/w500/${id}/backdrop.jpg`);
+  res.redirect(`https://image.tmdb.org/t/p/w500/${id}/backdrop.jpg`);
 }

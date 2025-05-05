@@ -26,7 +26,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ item, mediaType }) => {
       <div className="aspect-[2/3] w-full">
         {item.poster_path ? (
           <img
-            src={`https://cover-images.b-cdn.net/t/p/w500${item.poster_path}`}
+            src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
             alt={title}
             className="h-full w-full object-cover transition-transform duration-700"
             style={{

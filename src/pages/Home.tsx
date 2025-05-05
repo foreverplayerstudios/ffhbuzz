@@ -44,7 +44,7 @@ const FeaturedBanner: React.FC<FeaturedBannerProps> = ({ items, mediaType }) => 
           {/* Background Image */}
           <div className="absolute inset-0 bg-gray-900">
             <img
-              src={`https://cover-images.b-cdn.net/t/p/original${currentItem.backdrop_path}`}
+              src={`https://image.tmdb.org/t/p/original${currentItem.backdrop_path}`}
               alt={title}
               className="w-full h-full object-cover transform scale-105 transition-transform duration-[2s] group-hover:scale-110"
             />
@@ -70,7 +70,7 @@ const FeaturedBanner: React.FC<FeaturedBannerProps> = ({ items, mediaType }) => 
               <div className="hidden md:block relative group/poster w-1/4 max-w-[200px] flex-shrink-0">
                 <div className="absolute inset-0 rounded-xl transition-colors duration-300 group-hover/poster:bg-primary-500/10" />
                 <img
-                  src={`https://cover-images.b-cdn.net/t/p/w500${currentItem.poster_path}`}
+                  src={`https://image.tmdb.org/t/p/w500${currentItem.poster_path}`}
                   alt={title}
                   className="w-full rounded-xl shadow-2xl transform -translate-y-8 transition-all duration-500 group-hover/poster:scale-105 relative z-10"
                 />
@@ -313,6 +313,24 @@ export const Home = () => {
           {/* Featured Content Carousel */}
           <div className="mb-8 sm:mb-12 md:mb-16">
             {trendingMovies && <FeaturedBanner items={trendingMovies.slice(0, 5)} mediaType="movie" />}
+          </div>
+
+          {/* Advertisement */}
+          <div className="flex justify-center my-8">
+            <div id="frame" style={{width: '728px'}}>
+              <iframe
+                data-aa='2393199'
+                src='//ad.a-ads.com/2393199?size=728x90'
+                style={{width:'728px', height:'90px', border:'0px', padding:0, overflow:'hidden', backgroundColor: 'transparent'}}
+              />
+              <a
+                style={{display: 'block', textAlign: 'right', fontSize: '12px'}}
+                id="frame-link"
+                href="https://aads.com/campaigns/new/?source_id=2393199&source_type=ad_unit&partner=2393199"
+              >
+                Advertise here
+              </a>
+            </div>
           </div>
 
           {/* Quick Navigation */}

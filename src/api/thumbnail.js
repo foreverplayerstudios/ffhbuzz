@@ -18,7 +18,7 @@ export default async function handler(req, res) {
     
     // TMDB image path for backdrop image
     // Note: Using the CDN configured for the project
-    const imageUrl = `https://cover-images.b-cdn.net/t/p/w780${mediaType === 'tv' ? 
+    const imageUrl = `https://image.tmdb.org/t/p/w780${mediaType === 'tv' ?
       `/tv/${id}/backdrop.jpg` : 
       `/movie/${id}/backdrop.jpg`
     }`;

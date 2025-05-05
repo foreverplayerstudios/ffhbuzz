@@ -126,7 +126,7 @@ export const Watch = () => {
     type: mediaType === 'movie' ? 'video.movie' : 'video.episode',
     mediaType,
     id: id,
-    image: details.backdrop_path ? `https://cover-images.b-cdn.net/t/p/w1280${details.backdrop_path}` : undefined,
+    image: details.backdrop_path ? `https://image.tmdb.org/t/p/w1280${details.backdrop_path}` : undefined,
     publishedAt: releaseDate,
     rating: details.vote_average,
     duration: runtime,
@@ -144,7 +144,7 @@ export const Watch = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f0f] via-black/80 to-transparent z-10" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.1),transparent_70%)] z-20" />
           <img
-            src={`https://cover-images.b-cdn.net/t/p/original${details.backdrop_path}`}
+            src={`https://image.tmdb.org/t/p/original${details.backdrop_path}`}
             alt={title}
             className="w-full h-[60vh] object-cover opacity-30"
           />
@@ -159,7 +159,7 @@ export const Watch = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-primary-500/20 via-primary-500/5 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.1),transparent)] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <img
-                      src={`https://cover-images.b-cdn.net/t/p/w500${details.poster_path}`}
+                      src={`https://image.tmdb.org/t/p/w500${details.poster_path}`}
                       alt={title}
                       className="w-full rounded-xl shadow-2xl transition-transform duration-300 group-hover:scale-[1.02] relative z-10"
                     />
@@ -225,13 +225,31 @@ export const Watch = () => {
                 </div>
 
                 <div className="mb-8">
-                  <VideoPlayer 
-                    mediaType={mediaType as 'movie' | 'tv'} 
-                    id={id!} 
+                  <VideoPlayer
+                    mediaType={mediaType as 'movie' | 'tv'}
+                    id={id!}
                     season={mediaType === 'tv' ? selectedSeason : undefined}
                     episode={mediaType === 'tv' ? selectedEpisode : undefined}
                     title={title}
                   />
+                </div>
+
+                {/* Advertisement */}
+                <div className="flex justify-center mb-8">
+                  <div id="frame" style={{width: '728px'}}>
+                    <iframe
+                      data-aa='2393199'
+                      src='//ad.a-ads.com/2393199?size=728x90'
+                      style={{width:'728px', height:'90px', border:'0px', padding:0, overflow:'hidden', backgroundColor: 'transparent'}}
+                    />
+                    <a
+                      style={{display: 'block', textAlign: 'right', fontSize: '12px'}}
+                      id="frame-link"
+                      href="https://aads.com/campaigns/new/?source_id=2393199&source_type=ad_unit&partner=2393199"
+                    >
+                      Advertise here
+                    </a>
+                  </div>
                 </div>
 
                 {mediaType === 'tv' && details.seasons && (
@@ -288,7 +306,7 @@ export const Watch = () => {
                             <div className="relative overflow-hidden rounded-lg">
                               {episode.still_path ? (
                                 <img
-                                  src={`https://cover-images.b-cdn.net/t/p/w300${episode.still_path}`}
+                                  src={`https://image.tmdb.org/t/p/w300${episode.still_path}`}
                                   alt={episode.name}
                                   className="w-40 aspect-video object-cover transition-transform duration-300 group-hover:scale-110"
                                 />
