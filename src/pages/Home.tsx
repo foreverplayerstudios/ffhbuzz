@@ -7,6 +7,7 @@ import MovieCard from '../components/MovieCard';
 import { SEO } from '../components/SEO';
 import { cn } from '../utils/cn';
 import { createSEOProps } from '../utils/seo-helper';
+import { Advertisement } from '../components/Advertisement';
 
 interface FeaturedBannerProps {
   items: any[];
@@ -316,22 +317,7 @@ export const Home = () => {
           </div>
 
           {/* Advertisement */}
-          <div className="flex justify-center my-8">
-            <div id="frame" style={{width: '728px'}}>
-              <iframe
-                data-aa='2393199'
-                src='//ad.a-ads.com/2393199?size=728x90'
-                style={{width:'728px', height:'90px', border:'0px', padding:0, overflow:'hidden', backgroundColor: 'transparent'}}
-              />
-              <a
-                style={{display: 'block', textAlign: 'right', fontSize: '12px'}}
-                id="frame-link"
-                href="https://aads.com/campaigns/new/?source_id=2393199&source_type=ad_unit&partner=2393199"
-              >
-                Advertise here
-              </a>
-            </div>
-          </div>
+          <Advertisement className="my-8" />
 
           {/* Quick Navigation */}
           <section className="mb-16">
